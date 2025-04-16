@@ -12,6 +12,7 @@ async function bootstrap() {
 
       if (
         origin.includes('julia-heloisas-projects.vercel.app') ||
+        origin.includes('reciclagem-fe.vercel.app') ||
         origin.includes('localhost')
       ) {
         return callback(null, true);
