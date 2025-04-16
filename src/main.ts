@@ -10,7 +10,10 @@ async function bootstrap() {
     ) => {
       if (!origin) return callback(null, true);
 
-      if (origin.includes('julia-heloisas-projects.vercel.app')) {
+      if (
+        origin.includes('julia-heloisas-projects.vercel.app') ||
+        origin.includes('localhost')
+      ) {
         return callback(null, true);
       }
 
