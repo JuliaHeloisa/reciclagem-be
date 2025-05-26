@@ -20,9 +20,8 @@ export class RecyclingItemService {
     createDto: CreateRecyclingItemDto,
   ): Promise<RecyclingItem> {
     const location = await this.recyclingLocationRepository.findOne({
-      where: { id: createDto.locationId },
+      where: { id: createDto.recyclingLocationId },
     });
-
     if (!location) {
       throw new NotFoundException('Local de reciclagem não encontrado');
     }

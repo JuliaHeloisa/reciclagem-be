@@ -23,5 +23,5 @@ export class CreateRecyclingItemDto {
 
   @IsNotEmpty()
   @IsUUID()
-  locationId: string;
+  recyclingLocationId: string;
 }
